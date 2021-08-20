@@ -15,6 +15,6 @@ sumInput();
 alert(numbers);
 alert(sum);
 
- // numbers.sort(function(a,b){
- //     return a - b;
- // })
+//  numbers.sort(function(a,b){
+//      return a - b;
+//  })
