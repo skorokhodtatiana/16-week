@@ -10,18 +10,36 @@
 
 <body>
     <h1>Выбери свой автомобиль</h1>
-    <form action="#">
+    <form id="form" action="#">
 
         <p>Выберите состояние</p>
-        <input type="radio" name="condition" value="new" checked="checked" />Новый<br>
-        <input type="radio" name="condition" value="old" />Б/У<br>
+        <div id="condition">
+        <label>
+            <input class="condition" change="function(event)" id="newCondition" type="radio" name="condition" value="new"  />Новый
+        </label><br>
+        <label>
+            <input class="condition" change="function(event)" id="oldCondition" type="radio" name="condition" value="old" />Б/У
+        </label>
+    </div>
         <p>
             <p>Выберите трансмиссию</p>
-            <input type="radio" name="transmission" value="auto" checked="checked" />АКП<br>
-            <input type="radio" name="transmission" value="manual" />МКП<br>
+
+            <input id="autoTransmission" type="radio" name="transmission" value="auto" checked="checked" disabled />АКП<br>
+            <input id="manualTransmission" type="radio" name="transmission" value="manual" disabled />МКП
+
             <p>
-                <select name="brand">
-                    <Option disabled selected="selected">Марка</Option>
+                <select id="brandCar" name="brand">
+                    <Option value="mark" disabled selected="selected">Марка</Option>
+                    <Option id="ferrari" value="ferrari">Ferrari</Option>
+                    <Option id="bmw" value="bmw">BMW</Option>
+                    <Option id="audi" value="audi">Audi</Option>
+                    <Option id="skoda" value="skoda">Skoda</Option>
+                </select>
+            </p>
+
+            <p>
+                <select id="brandCar2" name="brand" disabled>
+                    <Option value="mark" disabled selected="selected">Марка</Option>
                     <Option value="Ferrari">Ferrari</Option>
                     <Option value="BMW">BMW</Option>
                     <Option value="Audi">Audi</Option>
@@ -31,15 +49,15 @@
 
             <p>
                 <p>Ценовой диапазон</p>
-                    <input type="checkbox" name="cost" value="cheap">до 12.000$<br>
-                    <input type="checkbox" name="cost" value="medium">до 12.000$ до 17.000$<br>
-                    <input type="checkbox" name="cost" value="expensive">больше 17.000$                    
+                <input type="checkbox" name="cost" value="cheap" disabled>до 12.000$<br>
+                <input type="checkbox" name="cost" value="medium" disabled>до 12.000$ до 17.000$<br>
+                <input type="checkbox" name="cost" value="expensive" disabled>больше 17.000$
             </p>
             <p>
                 <p>Тип кузова</p>
-                    <input type="checkbox" name="type" value="1">универсал<br>
-                    <input type="checkbox" name="type" value="2">седан<br>
-                    <input type="checkbox" name="type" value="3">чэтчбэк                    
+                <input type="checkbox" name="type" value="1" disabled>универсал<br>
+                <input type="checkbox" name="type" value="2" disabled>седан<br>
+                <input type="checkbox" name="type" value="3" disabled>чэтчбэк
             </p>
             <p>
                 <label for="nameUser">Введите имя</label>
@@ -50,9 +68,10 @@
                 <input type="number" id="numberPhone" minlength="9" />
             </p>
             <p>
-                <button type="button">Рассчитать</button>
+                <button type="submit">Рассчитать</button>
             </p>
     </form>
+    <script src="./formCar.js"> </script>
 </body>
 
 </html>
