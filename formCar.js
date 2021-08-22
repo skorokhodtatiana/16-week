@@ -121,5 +121,16 @@ formCalculate.addEventListener('submit', function onSubmit(event){
     alert(sumPrice);
 });
 
+let numberPhone = document.getElementById('numberPhone');
+let errorMessage = document.getElementById('errorMessage');
+let buttonOnSubmit = document.getElementById('buttonOnSubmit');
+
+function checkLength(){
+if(numberPhone.value.length < 9){
+    errorMessage.innerHTML += "Ваш номер телефона слишком короткий<br>";
+}
+}
+
+buttonOnSubmit.addEventListener('click', checkLength);
 
 
