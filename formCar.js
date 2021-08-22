@@ -28,12 +28,12 @@ let priceTransmission = [
     ['manual', 450]
 ]
 
-function getPriceTransmission(elem){
+function getPriceTransmission(elem) {
     console.log(elem.value);
     let valuePriceTransmission = elem.value;
-    
-    for(i=0; i<priceTransmission.length; i++){
-        if(priceTransmission[i][0] == valuePriceTransmission){
+
+    for (i = 0; i < priceTransmission.length; i++) {
+        if (priceTransmission[i][0] == valuePriceTransmission) {
             let costTransmission = priceTransmission[i][1];
             sumPrice += costTransmission;
             console.log(sumPrice);
@@ -66,7 +66,6 @@ let priceBrand = [{
 ];
 
 const selectBrandCar = document.getElementById('brandCar');
-const selectBrandCar2 = document.getElementById('brandCar2');
 
 selectBrandCar.addEventListener('change', function (event) {
     const valueBrand = event.target.value;
@@ -81,6 +80,40 @@ selectBrandCar.addEventListener('change', function (event) {
         }
     }
     if (valueBrand != 'mark') {
-        selectBrandCar2.disabled = false;
+        carCruise.disabled = false;
+        airbags.disabled = false;
+        armrests.disabled = false;
     }
 })
+
+let priceAdditions = [{
+        value: 'carCruise',
+        price: 400
+    },
+    {
+        value: 'airbags',
+        price: 600
+    },
+    {
+        value: 'armrests',
+        price: 200
+    }
+];
+
+function getPriceAdditions(elem) {
+    let elemAddition = elem.value;
+    console.log(elemAddition);
+
+    for (i = 0; i < priceAdditions.length; i++) {
+        if (priceAdditions[i].value == elemAddition) {
+            let costAddition = priceAdditions[i].price;
+            // console.log(costAddition);
+            sumPrice += costAddition;
+            console.log(sumPrice);
+        }
+    }
+}
+
+function onSubmit(event){
+    event.preventDefoult();
+}

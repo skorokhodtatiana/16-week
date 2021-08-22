@@ -34,26 +34,13 @@
         </p>
 
         <p>
-            <select id="brandCar2" name="brand" disabled>
-                <Option value="mark" disabled selected="selected">Марка</Option>
-                <Option value="Ferrari">Ferrari</Option>
-                <Option value="BMW">BMW</Option>
-                <Option value="Audi">Audi</Option>
-                <Option value="Skoda">Skoda</Option>
-            </select>
-        </p>
-
-        <p>
-            <p>Ценовой диапазон</p>
-            <input type="checkbox" name="cost" value="cheap" disabled>до 12.000$<br>
-            <input type="checkbox" name="cost" value="medium" disabled>до 12.000$ до 17.000$<br>
-            <input type="checkbox" name="cost" value="expensive" disabled>больше 17.000$
-        </p>
-        <p>
-            <p>Тип кузова</p>
-            <input type="checkbox" name="type" value="1" disabled>универсал<br>
-            <input type="checkbox" name="type" value="2" disabled>седан<br>
-            <input type="checkbox" name="type" value="3" disabled>чэтчбэк
+            <p>Дополнительные возможности</p>
+            <input id="carCruise" onchange="getPriceAdditions(this)" type="checkbox" name="additional1" value="carCruise" disabled>
+            <label>Автокруиз</label><br>
+            <input id="airbags" onchange="getPriceAdditions(this)" type="checkbox" name="additional2" value="airbags" disabled>
+            <label>Подушки безопасности</label><br>
+            <input id="armrests" onchange="getPriceAdditions(this)" type="checkbox" name="additional3" value="armrests" disabled>
+            <label>Подлокотники</label>
         </p>
         <p>
             <label for="nameUser">Введите имя</label>
@@ -61,10 +48,10 @@
         </p>
         <p>
             <label for="numberPhone">Введите номер телефона</label>
-            <input type="number" id="numberPhone" minlength="9" />
+            <input type="number" id="numberPhone" maxlength="9" />
         </p>
         <p>
-            <button type="submit">Рассчитать</button>
+            <button type="submit" onclick="onSubmit(event)">Рассчитать</button>
         </p>
     </form>
     <script src="./formCar.js"> </script>
