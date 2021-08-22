@@ -10,7 +10,7 @@
 
 <body>
     <h1>Выбери свой автомобиль</h1>
-    <form id="form" action="#">
+    <form id="formCalculate" action="#">
 
         <p>Выберите состояние</p>
         <input onchange="getPriceCondition(this)" id="newCondition" type="radio" name="condition" value="new" />
@@ -51,7 +51,7 @@
             <input type="number" id="numberPhone" maxlength="9" />
         </p>
         <p>
-            <button type="submit" onclick="onSubmit(event)">Рассчитать</button>
+            <button id="buttonOnSubmit" type="submit">Рассчитать</button>
         </p>
     </form>
     <script src="./formCar.js"> </script>

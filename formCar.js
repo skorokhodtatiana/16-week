@@ -26,7 +26,7 @@ function getPriceCondition(elem) {
 let priceTransmission = [
     ['auto', 900],
     ['manual', 450]
-]
+];
 
 function getPriceTransmission(elem) {
     console.log(elem.value);
@@ -74,7 +74,7 @@ selectBrandCar.addEventListener('change', function (event) {
     for (i = 0; i < priceBrand.length; i++) {
         if (priceBrand[i].value == valueBrand) {
             let costBrand = priceBrand[i].price;
-            console.log(priceBrand[i].price);
+            // console.log(priceBrand[i].price);
             sumPrice += costBrand;
             console.log(sumPrice);
         }
@@ -84,7 +84,7 @@ selectBrandCar.addEventListener('change', function (event) {
         airbags.disabled = false;
         armrests.disabled = false;
     }
-})
+});
 
 let priceAdditions = [{
         value: 'carCruise',
@@ -114,6 +114,12 @@ function getPriceAdditions(elem) {
     }
 }
 
-function onSubmit(event){
-    event.preventDefoult();
-}
+let  formCalculate= document.getElementById('formCalculate');
+
+formCalculate.addEventListener('submit', function onSubmit(event){
+  
+    event.preventDefault();
+    alert(sumPrice);
+});
+
+
