@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #errorMessage{
+            color: red;
+        }
+    </style>
     <title>Document</title>
 </head>
 
@@ -44,12 +49,13 @@
         </p>
         <p>
             <label for="nameUser">Введите имя</label>
-            <input type="text" id="nameUser" />
+            <input type="text" id="nameUser" required />
         </p>
         <p>
             <label for="numberPhone">Введите номер телефона</label>
-            <input type="number" id="numberPhone" maxlength="9" />
+            <input type="number" id="numberPhone" max="9" required/>
         </p>
+        <div id="errorMessage"></div>
         <p>
             <button id="buttonOnSubmit" type="submit">Рассчитать</button>
         </p>
