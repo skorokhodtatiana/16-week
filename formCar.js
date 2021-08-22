@@ -114,23 +114,24 @@ function getPriceAdditions(elem) {
     }
 }
 
-let  formCalculate= document.getElementById('formCalculate');
+let formCalculate = document.getElementById('formCalculate');
 
-formCalculate.addEventListener('submit', function onSubmit(event){
+formCalculate.addEventListener('submit', function onSubmit(event) {
     event.preventDefault();
-    alert(sumPrice);
+    if (numberPhone.value.length >= 9) {
+        alert(sumPrice);
+    }
 });
 
 let numberPhone = document.getElementById('numberPhone');
 let errorMessage = document.getElementById('errorMessage');
 let buttonOnSubmit = document.getElementById('buttonOnSubmit');
 
-function checkLength(){
-if(numberPhone.value.length < 9){
-    errorMessage.innerHTML += "Ваш номер телефона слишком короткий<br>";
+function checkLength() {
+    errorMessage.innerHTML = "";
+    if (numberPhone.value.length < 9) {
+        errorMessage.innerHTML += "Ваш номер телефона слишком короткий<br>";
+    }
 }
-}
 
-buttonOnSubmit.addEventListener('click', checkLength);
-
-
+numberPhone.addEventListener('input', checkLength);
