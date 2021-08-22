@@ -117,7 +117,6 @@ function getPriceAdditions(elem) {
 let  formCalculate= document.getElementById('formCalculate');
 
 formCalculate.addEventListener('submit', function onSubmit(event){
-  
     event.preventDefault();
     alert(sumPrice);
 });
