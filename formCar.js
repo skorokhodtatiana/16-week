@@ -131,4 +131,5 @@ function checkLength() {
         errorMessage.innerHTML += "Ваш номер телефона слишком короткий<br>";
     }
 }
+
 numberPhone.addEventListener('input', checkLength);
