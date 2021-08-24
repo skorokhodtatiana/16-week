@@ -45,8 +45,6 @@ function getPriceTransmission(elem) {
     }
 }
 
-
-
 let priceBrand = [{
         value: 'ferrari',
         price: 1000
@@ -71,7 +69,7 @@ selectBrandCar.addEventListener('change', function (event) {
     const valueBrand = event.target.value;
     console.log(valueBrand);
 
-    for (i = 0; i < priceBrand.length; i++) {
+    for (let i = 0; i < priceBrand.length; i++) {
         if (priceBrand[i].value == valueBrand) {
             let costBrand = priceBrand[i].price;
             // console.log(priceBrand[i].price);
