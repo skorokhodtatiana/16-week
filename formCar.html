@@ -22,12 +22,13 @@
         <label for="newCondition">Новый</label><br>
         <input onchange="getPriceCondition(this)" id="oldCondition" type="radio" name="condition" value="old" />
         <label for="oldCondition">Б/У</label>
+        
         <p>Выберите трансмиссию</p>
-
         <input onchange="getPriceTransmission(this)" id="autoTransmission" type="radio" name="transmission" value="auto" disabled />
         <label for="autoTransmission">АКП</label><br />
         <input onchange="getPriceTransmission(this)" id="manualTransmission" type="radio" name="transmission" value="manual" disabled />МКП
         <label for="manualTransmission"></label>
+        
         <p>
             <select id="brandCar" name="brand" disabled>
                 <Option value="mark" disabled selected="selected">Марка</Option>
